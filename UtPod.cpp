@@ -20,6 +20,9 @@ UtPod::UtPod(int size)
     else {
         memSize = size;
     }
+
+    unsigned int currentTime = (unsigned) time(0);
+    srand(currentTime);
 }
 
 int UtPod::addSong(const Song &s)
@@ -84,7 +87,7 @@ void UtPod::showSongList()
 
 void UtPod::sortSongList()
 {
-    
+
 }
 
 void UtPod::clearMemory()
