@@ -1,13 +1,12 @@
 /* utPod_driver.cpp
-Demo Driver for the UtPod.
-Roger Priebe
-EE 312 10/16/18
+Driver for the UtPod.
+Luis Vazquez
+EE 312 04/03/20
 
-This is a basic driver for the UtPod.
-
-You will want to do more complete testing.
+This is a driver for the UtPod.
 
 */
+
 #include <cstdlib>
 #include <iostream>
 #include "Song.h"
@@ -55,6 +54,8 @@ int main(int argc, char *argv[])
     cout<< "\n\nTHIS IS AFTER SORTING"<<endl;
     t.showSongList();
 
+    t.clearMemory();
+    t.showSongList();
     result = t.removeSong(s2);
     cout << "delete result = " << result << endl;
 

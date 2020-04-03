@@ -1,4 +1,9 @@
-//Song.cpp
+/*Song.cpp
+Luis Vazquez, Roger Priebe
+EE312 04/03/20
+
+This is the Song class.
+*/
 
 #include "Song.h"
 
@@ -110,6 +115,15 @@ bool Song::operator >(Song const &rhs)
     else {
         return false;
     }
+}
+
+Song& Song::operator=(const Song &rhs)
+        {
+    artist=rhs.artist;
+    name=rhs.name;
+    size=rhs.size;
+    cout << "override operator - "<<artist<< endl;
+    return *this;
 }
 
 Song::~Song(){
