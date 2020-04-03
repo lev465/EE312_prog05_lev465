@@ -90,10 +90,13 @@ bool Song::operator <(Song const &rhs)
     if(artist<rhs.artist) {
         return true;
     }
-    else if(name<rhs.name) {
+    else if(name<rhs.name&&
+            artist==rhs.artist) {
         return true;
     }
-    else if(size<rhs.size) {
+    else if(size<rhs.size &&
+            artist==rhs.artist &&
+            name==rhs.name) {
         return true;
     }
     else {
@@ -106,10 +109,13 @@ bool Song::operator >(Song const &rhs)
     if(artist>rhs.artist) {
         return true;
     }
-    else if(name>rhs.name) {
+    else if(name>rhs.name &&
+            artist==rhs.artist) {
         return true;
     }
-    else if(size>rhs.size) {
+    else if(size>rhs.size &&
+            artist==rhs.artist &&
+            name==rhs.name) {
         return true;
     }
     else {
@@ -122,7 +128,6 @@ Song& Song::operator=(const Song &rhs)
     artist=rhs.artist;
     name=rhs.name;
     size=rhs.size;
-    cout << "override operator - "<<artist<< endl;
     return *this;
 }
 

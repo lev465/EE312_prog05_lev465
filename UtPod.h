@@ -139,9 +139,19 @@ public:
    input parms - none
 
    output parms - number of songs in UtPod
-*/
+    */
     int numSongs();
 
+
+    //Function showNumSongs
+    //*outputs the number of songs in the UtPod class to standard output
+    void showNumSongs();
+
+    //copy constructor
+    UtPod(const UtPod& t);
+
+    //copy assignment
+    UtPod& operator=(const UtPod &t);
 
     ~UtPod();
 

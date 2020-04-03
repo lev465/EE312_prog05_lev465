@@ -172,6 +172,36 @@ int UtPod::numSongs(){
     return count;
 }
 
+void UtPod::showNumSongs()
+{
+    cout<<"Number of songs in UtPod - "<< numSongs()<<"\n"<<endl;
+}
+
+//copy constructor
+UtPod::UtPod(const UtPod& t)
+{
+    SongNode *temp=t.songs;
+    while(temp!=NULL){
+        memSize=t.memSize;
+        this->addSong(temp->s);
+        temp=temp->next;
+    }
+}
+
+//copy assignment operator
+UtPod& UtPod::operator=(const UtPod &t){
+    if(this!= &t){
+        SongNode *temp=t.songs;
+        delete this->songs;
+        memSize=t.memSize;
+        songs=new SongNode;
+        while(temp!=NULL) {
+            this->addSong(temp->s);
+            temp = temp->next;
+        }
+    }
+    return *this;
+}
 
 UtPod::~UtPod()
 {
