@@ -110,8 +110,13 @@ int main(int argc, char *argv[])
     t.showSongList();
     t.showNumSongs();
 
-    cout<<"Utpod t2 - "<<endl;
+    cout<<"Utpod t2 - Copy Constructor"<<endl;
     t2.showSongList();
     t2.showNumSongs();
 
+    UtPod t3;
+    t3=t;
+    cout<<"Utpod t3 - Copy Assignment Operator"<<endl;
+    t3.showSongList();
+    t3.showNumSongs();
 }

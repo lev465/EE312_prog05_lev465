@@ -181,6 +181,7 @@ void UtPod::showNumSongs()
 UtPod::UtPod(const UtPod& t)
 {
     SongNode *temp=t.songs;
+    songs= NULL;
     while(temp!=NULL){
         memSize=t.memSize;
         this->addSong(temp->s);
@@ -194,7 +195,7 @@ UtPod& UtPod::operator=(const UtPod &t){
         SongNode *temp=t.songs;
         delete this->songs;
         memSize=t.memSize;
-        songs=new SongNode;
+        songs=NULL;
         while(temp!=NULL) {
             this->addSong(temp->s);
             temp = temp->next;

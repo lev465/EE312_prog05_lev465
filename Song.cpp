@@ -123,11 +123,9 @@ bool Song::operator >(Song const &rhs)
     }
 }
 
-Song& Song::operator=(const Song &rhs)
-        {
+Song& Song::operator=(const Song &rhs){
     artist=rhs.artist;
     name=rhs.name;
-    size=rhs.size;
     return *this;
 }
 
