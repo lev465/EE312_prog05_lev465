@@ -42,14 +42,19 @@ int main(int argc, char *argv[])
     result = t.addSong(s5);
     cout << "add result = " << result << endl;
 
-    t.showSongList();
+    cout<< "\n\nthis is BEFORE the shuffle"<<endl;
 
-    cout<< "this is the shuffle\n\n"<<endl;
+    t.showSongList();
 
     t.shuffle();
 
+    cout <<"\n\nthis is after"<<endl;
     t.showSongList();
-    cout <<"this is after\n\n"<<endl;
+
+    t.sortSongList();
+    cout<< "\n\nTHIS IS AFTER SORTING"<<endl;
+    t.showSongList();
+
     result = t.removeSong(s2);
     cout << "delete result = " << result << endl;
 
